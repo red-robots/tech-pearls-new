@@ -81,6 +81,9 @@ if($post_slug=="my-account") {
 				<div class="mobile-main-nav">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-mobile-menu','container_class'=>'mobile-content-nav' ) ); ?>
 					<?php wp_nav_menu( array( 'menu' => 'Secondary Menu', 'container_class'=>'secondary-content-nav' ) ); ?>
+					<div class="myaccountlogin">
+						<a href="<?php bloginfo('url'); ?>/my-account">My Account</a>
+					</div>	
 				</div>
 			</div>
 		</div>

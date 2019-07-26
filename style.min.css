@@ -1685,6 +1685,8 @@ a:hover,a:active{outline:0}
 }@media screen and (min-width:600px){.secondary-menu-container .menu{display:inline-block;float:right}
 }.secondary-menu-container .menu>li{display:inline-block;float:none}
 .secondary-menu-container a{padding:0 10px;font-size:15px;text-transform:uppercase}
+.myaccountlogin{width:100%;text-align:center}
+.myaccountlogin a{display:block;color:#FFF;font-size:20px;font-weight:300;padding-top:10px;padding-bottom:10px;border-bottom:1px dotted rgba(255,255,255,0.5);text-decoration:none}
 #toggleMenu{display:block;cursor:pointer;width:45px;height:40px;position:absolute;top:10px;right:18px;z-index:100002}
 @media screen and (min-width:600px){#toggleMenu{display:none}
 }#toggleMenu i{position:relative;margin-top:9px;margin-bottom:9px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:absolute;top:50%;left:50%;margin-left:-15px;margin-top:-1.5px;display:block;width:30px;height:3px;background-color:#FFF;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}

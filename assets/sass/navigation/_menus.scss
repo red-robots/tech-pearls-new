@@ -92,7 +92,20 @@
 		text-transform: uppercase;
 	}
 }
-
+.myaccountlogin {
+	width: 100%;
+	text-align: center;
+	a {
+		display: block;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+	}
+}
 #toggleMenu {
 	display: block;
 	cursor: pointer;
