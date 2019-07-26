@@ -1,0 +1,1725 @@
+.banner {
+	background-color: #a1a1a1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 450px;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		height: 600px;
+	}
+	@media screen and (min-width: $midwidth) {
+		height: 700px;
+	}
+	img {
+		display: none;
+		width: 100%;
+		height: auto;
+	}
+}
+.banner-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 );
+}
+
+.banner-caption {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	.inside {
+		display: inline-block;
+		max-width: 670px;
+		width: 90%;
+		position: relative;
+		top: 58%;
+		transform: translateY(-58%);
+		margin: 0 auto;
+		color: #FFF;
+	}
+	.caption {
+		padding: 15px 15px;
+		background: rgba(3,26,38,.75);
+		@media screen and (min-width: $tabwidth) {
+			padding: 25px 20px;
+		}
+		&.has-button {
+			padding-bottom: 40px;
+		}
+	}
+	.title1 {
+		margin: 0 0;
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 1.3;
+		font-size: 20px;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 25px;
+		}
+	}
+	.title2 {
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 0;
+		letter-spacing: 1px;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 22px;
+		}
+	}
+	.button {
+		position: relative;
+		top: -25px;
+		width: 100%;
+		z-index: 2;
+		text-align: center;
+		a {
+			display: inline-block;
+			background: $color-yellow;
+			color: #FFF;
+			text-decoration: none;
+			padding: 13px 35px;
+			font-size: 20px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			@include transition(all ease-out .3s);
+			&:hover {
+				-ms-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-webkit-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+.fullwidth-text-section {
+	background: $color-yellow;
+	padding: 12px 30px 10px;
+	color: $color-dark-green;
+	p {
+		margin: 0 0;
+		line-height: 1.3;
+		font-weight: 700;
+		font-size: 22px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+.section-advatages {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: $color-subtle-grey;
+	.row {
+		margin-left: -20px;
+		margin-right: -20px;
+		@media screen and (min-width: $tabwidth) {
+			@include flexbox();
+			@include flexbox-direction(row);
+			@include flexbox-wrap(wrap);
+			@include flexbox-justify(center);
+			@include flexbox-align-content(center);
+		}
+	}
+	.column {
+		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		@media screen and (min-width: $tabwidth) {
+			width: 33.333%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	.pad {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.icon img {
+		width: 150px;
+		height: auto;
+	}
+	.descriptiondiv {
+		@media screen and (min-width: $tabwidth) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+	.title {
+		margin: 0 0 5px;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: $color-dark-green;
+		text-transform: uppercase;
+	}
+	.description {
+		margin: 0 0;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.cta-div {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	.cta-div a {
+		display: inline-block;
+		padding: 12px 40px;
+		color: #FFF;
+		background: $color-dark-green;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 400;
+		@include transition(all ease-out .3s);
+		&:hover {
+			-ms-transform: scale(1.1);
+			-moz-transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+	}
+}
+.section-courses {
+	background: $color-dark-green;
+	color: #FFF;
+	.fullwidth-text-section {
+		background: $color-teal;
+	}
+	.row {
+		margin-left: -20px;
+		margin-right: -20px;
+		@media screen and (min-width: $tabwidth) {
+			@include flexbox();
+			@include flexbox-direction(row);
+			@include flexbox-wrap(wrap);
+			@include flexbox-justify(center);
+			@include flexbox-align-content(center);
+		}
+	}
+	.column {
+		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		@media screen and (min-width: $tabwidth) {
+			width: 33.333%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	.pad {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.icon img {
+		width: 150px;
+		height: auto;
+	}
+	.title {
+		margin: 0 0 5px;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: #FFF;
+		text-transform: uppercase;
+	}
+	.description {
+		margin: 0 0;
+		font-size: 14px;
+		font-weight: 400;
+		color: #FFF;
+		height: auto;
+		@media screen and (min-width: $midwidth) {
+			height: 50px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			height: 45px;
+		}
+	}
+	.descriptiondiv {
+		@media screen and (min-width: $tabwidth) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+	.outer-wrapper {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		position: relative;
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(1,30,40,0.9);
+	}
+	.wrapper {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		position: relative;
+		z-index: 10;
+	}
+}
+
+.list-column {
+	.list-title {
+		margin-top: 20px;
+	}
+	.list-title span {
+		display: inline-block;
+		border: 1px solid #FFF;
+		font-size: 12px;
+		padding: 2px 10px;
+		text-transform: uppercase;
+	}
+	.links {
+		margin: 10px 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	a {
+		display: inline-block;
+		text-decoration: none;
+		color: $color-teal;
+		@include transition(all ease-out .3s);
+	}
+	.links a {
+		font-size: 13px;
+		font-weight: 300;
+		font-style: italic;
+		padding:2px 0;
+		&:hover {
+			color: $color-yellow;
+		}
+	}
+	.more-link {
+		margin-top: 10px;
+	}
+	.more-link a {
+		font-size: 11px;
+		font-weight: 300;
+		position: relative;
+		span {
+			display: inline-block;
+			position: relative;
+			border-bottom: 1px solid $color-teal;
+			text-align: center;
+		}
+	}
+	.more-link i,
+	.more-link i:before,
+	.more-link i:after { 
+		display: inline-block;
+		width: 9px;
+		height: 1px;
+		background: $color-teal;
+		position: absolute;
+	}
+
+	.more-link i {
+		bottom: -7px;
+    	left: 19px;
+	}
+	.more-link i:before,
+	.more-link i:after {
+		content:"";
+		top: 4px;
+	}
+	.more-link i:before {
+		-webkit-transform: translateY(0) rotate(60deg);
+		-ms-transform: translateY(0) rotate(60deg);
+		transform: translateY(0) rotate(60deg);
+		left: -2px;
+	}
+	.more-link i:after {
+		-webkit-transform: translateY(0) rotate(-60deg);
+		-ms-transform: translateY(0) rotate(-60deg);
+		transform: translateY(0) rotate(-60deg);
+		left: 2px;
+	}
+	.more-link a:hover {
+		color: $color-yellow;
+		span {
+			border-bottom-color: $color-yellow;
+		}
+		i,
+		i:before,
+		i:after {
+			background: $color-yellow;
+		}
+	}
+}
+
+.course-cta-button {
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+.section-testimonial {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: $color-subtle-grey;
+	@media screen and (min-width: $tabwidth) {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	.wrapper {
+		@media screen and (min-width: $tabwidth) {
+			@include flexbox();
+			@include flexbox-wrap(wrap);
+			@include flexbox-direction(row);
+			@include flexbox-justify(center);
+			@include flexbox-align-items(center);
+		}
+	}
+	.column {
+		margin-bottom: 30px;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+	.carousel-list {
+		position: relative;
+		width: 100%;
+    	float: left;
+	}
+	.testimonial .list {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		position: relative;
+	}
+	.testimonial .inside {
+		@media screen and (min-width: $tabwidth) {
+			padding-right: 5px;
+		}
+		@media screen and (min-width: $midwidth) {
+			padding-right: 30px;
+		}
+	}
+	.testimonial-text {
+		text-align: center;
+		font-size: 18px;
+		font-weight: 300;
+		font-style: italic;
+		display: none!important;
+		&.cycle-slide-active {
+			display: block!important;
+			position: relative!important;
+		}
+	}
+	p {
+		margin-bottom: 12px;
+	}
+	.author {
+		position: relative;
+		top: -5px;
+		font-size: 16px;
+	}
+	.pager-nav {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		text-align: center;
+		width: 100%;
+    	float: left;
+	}
+	.pager-nav span {
+		display: inline-block;
+		text-indent: -999em;
+		width: 8px;
+		height: 8px;
+		background: $color-dark-green;
+		border-radius: 100px;
+		margin: 0 4px;
+		position: relative;
+		&.cycle-pager-active {
+			background: $color-yellow;
+		}
+	}
+}
+.subcribe-form {
+	.inside {
+		@media screen and (min-width: $tabwidth) {
+			padding-left: 20px;
+		}
+		@media screen and (min-width: $midwidth) {
+			padding-left: 50px;
+		}
+	}
+	.form-wrapper {
+		border: 1px solid $color-dark-green;
+		padding: 20px 30px;
+	}
+	.gfield_label,
+	.gfield_required {
+		display: none!important;
+	}
+	.ginput_container * {
+		box-sizing: border-box;
+	}
+	.gform_footer {
+		margin: 20px 0 0!important;
+		padding: 0!important;
+		text-align: center;
+	}
+	.ginput_container input {
+		width: 100%!important;
+		border-radius: 0;
+		-webkit-appearance: none;
+		border: 1px solid #FFF;
+		background: #FFF;
+		padding: 6px 10px!important;
+		outline: none;
+		@include transition(all ease-out .3s);
+	}
+	.ginput_container input:focus {
+		border: 1px solid $color-dark-green;
+	}
+	.titlediv {
+		width: 100%;
+		text-align: center;
+		@media screen and (min-width: $midwidth) {
+			width: 65%;
+			margin: 0 auto;
+		}
+	}
+	.formtitle1 {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.2;
+		color: $color-dark-green;
+		margin: 0 0 10px;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+	.formtitle2 {
+		padding: 3px 20px;
+		font-size: 14px;
+		color: #FFF;
+		background: $color-yellow;
+	}
+	.gform_wrapper {
+		margin: 5px 0 0;
+		width: 100%;
+		float: left;
+	}
+	.gform_wrapper ul.gform_fields li.gfield {
+		padding: 0 0;
+	}
+	.gform_wrapper .gform_footer input.button, 
+	.gform_wrapper .gform_footer input[type=submit] {
+		-webkit-appearance: none;
+		border-radius: 0;
+		border: none;
+		box-shadow: none;
+		text-shadow: none;
+		background: $color-dark-green;
+		color: #FFF;
+		text-transform: uppercase;
+		margin: 0 0;
+		height: 30px;
+		line-height: 29px;
+		padding-top: 0;
+		padding-bottom: 0;
+		@include transition(all ease-out .3s);
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.site-footer {
+	background: $color-yellow;
+	color: #FFF;
+	.wrapper {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		@media screen and (min-width: $tabwidth) {
+			@include flexbox();
+			@include flexbox-justify(center);
+		}
+	}
+	.footer-menu-column {
+		position: relative;
+		padding-top: 10px;
+		padding-bottom: 12px;
+		border-top: 1px solid #FFF;
+		@media screen and (min-width: $tabwidth) {
+			display: inline-block;
+			width: 100%;
+			padding-top: 0;
+			padding-bottom: 0;
+			border-top: none;
+			&:before {
+				content:"";
+				display: block;
+				width: 1px;
+				height: 85%;
+				background: #FFF;
+				position: absolute;
+				top: 6px;
+				left: 0;
+			}
+		}
+	}
+	.footer-menu-column:first-child {
+		padding-top: 0;
+		border-top: none;
+		&:before {
+			display: none;
+		}
+	}
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	.footer-list {
+		@media screen and (min-width: $tabwidth) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	.footer-menu-column a {
+		display: inline-block;
+		text-decoration: none;
+		color: #FFF;
+		font-size: 12px;
+		font-weight: 500;
+		padding: 3px 0;
+		@include transition(all ease-out .3s);
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	.social-media a {
+		font-size: 30px;
+		line-height: 1;
+	}
+	.company-info .link {
+		@media screen and (min-width: $tabwidth) {
+			padding-right: 30px;
+		}
+	}
+}
+.copyright-section {
+	height: 40px;
+	background: $color-dark-green;
+}
+.title-wrap {
+	background: $color-yellow;
+	padding: 14px 0;
+	position: relative;
+	z-index: 10;
+}
+.section-title2 {
+	margin: 0 0;
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+.page-about {
+	.content-columns .row {
+		@media screen and (min-width: $tabwidth) {
+			@include flexbox();
+			@include flexbox-wrap(wrap);
+			@include flexbox-direction(center);
+			@include flexbox-justify(center);
+		}
+	}
+	.col {
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+			@include flexbox();
+			@include flexbox-justify(center);
+			@include flexbox-align-items(center);
+		}
+		&.mission {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: $color-dark-green;
+			&:before {
+				content:"";
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: $color-dark-green;
+				opacity: 0.88;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.textwrap {
+				color: #FFF;
+				padding: 30px 30px;
+				font-size: 16px;
+				font-weight: 600;
+				@media screen and (min-width: $tabwidth) {
+					padding: 5% 10%;
+					font-size: 20px;
+				}
+				@media screen and (min-width: $midwidth) {
+					padding: 18% 20%;
+				}
+			}
+		}
+		&.about {
+			background: $color-subtle-grey;
+			padding: 30px 30px;
+			@media screen and (min-width: $tabwidth) {
+				padding: 3%;
+			}
+			@media screen and (min-width: $midwidth) {
+				padding: 5%;
+			}
+		}
+	}
+	.textwrap {
+		position: relative;
+		z-index: 5;
+		p {
+			margin-top: 1.3em;
+			margin-bottom: 0;
+		}
+		p:first-child {
+			margin-top: 0;
+		}
+	}
+}
+.our-founder {
+	.med-wrapper {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		@media screen and (min-width: $tabwidth) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+	}
+	.titlediv {
+		background: $color-teal;
+		padding: 14px 0;
+	}
+	.imagecol {
+		margin-bottom: 30px;
+		@media screen and (min-width: $tabwidth) {
+			width: 28%;
+			float: left;
+			margin-bottom: 0;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.bio-text {
+		@media screen and (min-width: $tabwidth) {
+			width: 68%;
+			float: right;
+		}
+	}
+	.founder-name {
+		margin: 0 0 8px;
+		font-weight: 600;
+		font-size: 20px;
+	}
+}
+
+.main-content-wrapper {
+	position: relative;
+	.content-inner {
+		position: relative;
+		z-index: 20;
+	}
+}
+.page-faqs {
+	position: relative;
+	.med-wrapper  {
+		max-width: 800px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		@media screen and (min-width: $tabwidth) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+	}
+	.title-wrap {
+		background: $color-teal;
+	}
+	.image-bg {
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		&:before {
+			content:"";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #dbdfdf;
+			opacity: 0.75;
+		}
+	}
+	.image-overlay {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 5;
+		opacity: 0.85;
+		background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(225,228,228,1) 84%, rgba(219,223,223,1) 100%);
+		background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(225,228,228,1) 84%,rgba(219,223,223,1) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(225,228,228,1) 84%,rgba(219,223,223,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#dbdfdf',GradientType=0 );
+	}
+	.site-main {
+		position: relative;
+		z-index: 10;
+	}	
+	.faqrow {
+		margin-bottom: 15px;
+	}
+	.question {
+		background: $color-dark-green;
+		color: #FFF;
+		padding: 8px 50px 8px 15px;
+		line-height: 1.4;
+		font-weight: 600;
+		position: relative;
+	}
+	.answer {
+		padding: 30px;
+		background: #FFF;
+		display: none;
+		p {
+			margin-top: 1.3em;
+			margin-bottom: 0;
+		}
+		p:first-child {
+			margin-top: 0;
+		}
+		ul, ol {
+			margin: 0.5em 0 1em;
+			li {
+				margin-bottom: 10px;
+				position: relative;
+				ul, ol {
+					margin-bottom: 0.8em;
+				}
+			}
+		}
+		ol {
+			list-style: none; 
+			counter-reset: li;
+			li {
+				counter-increment: li;
+				padding-left: 5px;
+			}
+			li:before {
+   				content: counter(li) ") ";
+				color: $color-dark-green;
+				font-weight: bold;
+				display: inline-block; width: 1em;
+				margin-left: -1em;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	.plus-minus-toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 100%;
+		background: $color-yellow;
+		color: #FFF;
+		.arrow {
+			display: block;
+			width: 10px;
+			position: absolute;
+			left: 14px;
+			top: 50%;
+    		transform: translateY(-50%);
+    		@include transition(all ease .1s);
+		}
+		.arrow:before,
+		.arrow:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: #FFF;
+			position: absolute;
+		}
+		.arrow:before {
+			transform: rotate(45deg);
+			left: 1px;
+			top: -5px;
+		}
+		.arrow:after {
+			transform: rotate(-45deg);
+			top: 1px;
+    		left: 1px;
+		}
+		
+	}
+	.faqrow.collapse {
+		.plus-minus-toggle .arrow {
+			transform: translateY(0) rotate(90deg);
+		}
+	}
+}
+
+.default-theme {
+	.page-content-wrap {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+.gform_wrapper ul.gform_fields {
+	li.gfield#field_1_2  {
+		clear: none;
+		padding-right: 0;
+		@media screen and (min-width: $tabwidth) {
+			width: 48.8%;
+			float: left;
+			margin-right: 0;
+			margin-top: 2px;
+			margin-bottom: 15px;
+		}
+		input {
+			width: 100%;
+		}
+	}
+	li.gfield#field_1_3 {
+		clear: none;
+		padding-right: 0;
+		@media screen and (min-width: $tabwidth) {
+			width: 48.5%;
+			float: right;
+			margin-right: 15px;
+			margin-top: 2px;
+			margin-bottom: 15px;
+		}
+		input {
+			width: 100%;
+		}
+	}
+	select {
+		height: 33px;
+		line-height: 32px;
+		margin-top: 0!important;
+		width: 100%;
+	}
+	.select2-container {
+		display: block;
+		width: 100%!important;
+	}
+	.select2-container .select2-selection--single {
+		height: 33px;
+		border: 1px solid #CCC;
+		border-radius: 3px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		line-height: 30px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		height: 30px;
+	}
+	.gfield_checkbox {
+		li {
+			position: relative;
+			padding-left: 21px!important;
+		}
+		input[type="checkbox"] {
+			margin: 0 0!important;
+			position: absolute;
+			top: 1px;
+			left: 0;
+		}
+	}
+}
+.gform_wrapper .gform_footer input[type=submit] {
+	-webkit-appearance: none;
+	border: none;
+	background: $color-dark-green;
+	color: #FFF;
+	box-shadow: none;
+	text-shadow: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px!important;
+    line-height: 1.2;
+    margin: 0 0 !important;
+    padding: 12px 35px;
+    @include transition(all ease-out .3s);
+    &:hover {
+    	background: #3c849c;
+    }
+}
+#page .gform_wrapper .gform_footer {
+	margin-top: 5px;
+}
+body.page-id-19 .gform_wrapper {
+	max-width: 800px;
+	width: 100%;
+	margin-top: 30px;
+}
+body.woocommerce-account {
+	.entry-content input[type="submit"] {
+		-webkit-appearance: none;
+		border: 1px solid #b11a1a;
+		box-shadow: none;
+		text-shadow: none;
+		color: #FFF;
+		font-size: 13px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1.2;
+    	padding: 7px 10px;
+		background: rgb(206,18,18);
+		background: -moz-linear-gradient(top, rgba(206,18,18,1) 1%, rgba(170,0,19,1) 100%);
+		background: -webkit-linear-gradient(top, rgba(206,18,18,1) 1%,rgba(170,0,19,1) 100%);
+		background: linear-gradient(to bottom, rgba(206,18,18,1) 1%,rgba(170,0,19,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce1212', endColorstr='#aa0013',GradientType=0 );
+		@include transition(all ease-out .3s);
+		&:hover {
+			background: rgb(170,0,19);
+			background: -moz-linear-gradient(top, rgba(170,0,19,1) 0%, rgba(206,18,18,1) 99%);
+			background: -webkit-linear-gradient(top, rgba(170,0,19,1) 0%,rgba(206,18,18,1) 99%);
+			background: linear-gradient(to bottom, rgba(170,0,19,1) 0%,rgba(206,18,18,1) 99%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa0013', endColorstr='#ce1212',GradientType=0 );
+		}
+	}
+}
+#learndash_profile {
+	overflow: hidden;
+	margin-top: 15px;
+	padding-top: 0;
+	table {
+		width: 100.1%;
+		margin-bottom: 0;
+	}
+	thead th {
+		padding: 7px 13px;
+		background: $color-yellow;
+		color: $color-dark-green;
+		text-align: left;
+		&.ld_profile_certificate {
+			text-align: center;
+		}
+	}
+	tbody td {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	tbody tr:nth-child(odd) td {
+		background-color: #f4f5f5;
+	}
+	tbody tr:hover td {
+		background-color: #fdfbde;
+	}
+	.learndash_profile_heading {
+		background: $color-yellow;
+		color: $color-dark-green;
+		font-size: 14px;
+    	font-weight: bold;
+	}
+}
+#learndash_profile .profile_edit_profile a {
+	text-decoration: underline;
+}
+.learndash .notcompleted, #learndash_profile .notcompleted,
+.learndash .completed, #learndash_profile .completed {
+	line-height: 1.4;
+	background-image: none;
+	position: relative;
+	&:after {
+		content:"";
+		display: block;
+		width: 30px;
+		height: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top: -7px;
+		right: 0;
+	}
+}
+.learndash .notcompleted, #learndash_profile .notcompleted {
+	&:after {
+		background-image: url('images/notcompleted.png');
+	}
+}
+.learndash .completed, #learndash_profile .completed {
+	&:after {
+		background-image: url('images/completed.png');
+	}
+}
+#learndash_lessons h4 > a:hover, #learndash_quizzes h4 > a:hover, #learndash_lesson_topics_list ul > li > span.topic_item:hover {
+	background-color: #d7fbff;
+}
+.learndash h4 a.notcompleted,
+.learndash h4 a.completed {
+	&:after {
+		top: 3px!important;
+		right: 31px!important;
+	}
+}
+body.single-product {
+	div.product {
+		margin-top: 30px;
+	}
+	.woocommerce-product-gallery  {
+		margin-top: 5px;
+	}
+	.page-title {
+		margin: 0 0 5px;
+		line-height: 1.3;
+	}
+	.product_meta {
+		margin-bottom: 25px;
+	}
+	.related.products {
+		width: 100%;
+		float: left;
+		border-top: 5px solid $color-dark-green;
+		padding-top: 15px;
+		margin-top: 20px;
+		h2 {
+			font-size: 20px;
+		}
+		a.button {
+			margin-top: 5px;
+			padding: 7px 12px;
+		}
+	}
+}
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+	color: $color-dark-green;
+	font-weight: bold;
+    font-size: 20px;
+}
+.woocommerce div.product form.cart {
+	margin-bottom: 20px;
+}
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+	background: $color-yellow;
+	color: #FFF;
+	box-shadow: none;
+	border: none;
+	-webkit-appearance: none;
+	padding: 10px 18px;
+	font-size: 16px;
+	@include transition(all ease-out .3s);
+	&:hover {
+		background: #ffc645;
+		color: #FFF;
+	}
+}
+.woocommerce-Tabs-panel {
+	h3 {
+		margin-bottom: 10px;
+		margin-top: 20px;
+	}
+}
+.woocommerce a.button {
+	color: #333;
+	background-color: #d3d5d6;
+	text-shadow: none!important;
+}
+.woocommerce ul.products li.product .price {
+	color: $color-dark-green;
+	font-weight: bold;
+}
+.pswp__bg {
+	opacity: 0.95!important;
+}
+.pswp__button {
+	border: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	&:hover {
+		border: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+	}
+}
+.woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, 
+.woocommerce-page table.cart td.actions .input-text {
+	height: 30px;
+	line-height: 32px;
+    width: 150px;
+}
+body.woocommerce-cart .woocommerce button.button {
+	background-color: $color-dark-green;
+	color: #FFF;
+	text-shadow: none;
+}
+body.woocommerce-checkout .woocommerce button.button {
+	color: $color-dark-green!important;
+}
+.woocommerce button.button:disabled, 
+.woocommerce button.button:disabled[disabled] {
+	color:#FFF;
+	opacity: 0.35;
+}
+.woocommerce .related.products {
+	a.button {
+		background-color: $color-yellow;
+		color: #FFF;
+		&:hover {
+			background: #ffc645;
+			color: #FFF;
+		}
+	}
+	.woocommerce-loop-product__title {
+		color: $color-dark-green;
+		text-decoration: none;
+	}
+}
+.select2-container .select2-selection--single {
+	height: 30px;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+}
+.woocommerce-checkout #payment {
+	background: #c1e3ea;
+}
+.woocommerce-checkout #payment div.payment_box {
+	background: #FFF;
+}
+#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
+	border: 1em solid #ffffff;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	position: absolute;
+	top: -.75em;
+	left: 0;
+	margin: -1em 0 0 2em;
+}
+.woocommerce-checkout #payment ul.payment_methods {
+	border-bottom: 1px solid #6ea6a9;
+}
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+	float: none;
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	padding: 10px 15px;
+    font-size: 16px;
+}
+li.wc_payment_method label {
+	font-weight: 600;
+}
+.woocommerce #content div.product.no-prod-image div.summary, 
+.woocommerce div.product.no-prod-image div.summary, 
+.woocommerce-page #content div.product.no-prod-image div.summary, 
+.woocommerce-page div.product.no-prod-image div.summary {
+	width: 100%;
+	float: left;
+}
+
+.woocommerce-page div.product.no-prod-image {
+	.woocommerce-product-gallery {
+		display: none;
+	}
+}
+
+.woocommerce-tabs {
+	margin-top: 35px;
+}
+.woocommerce ul.products li.product.related-item {
+	.woocommerce-loop-product__title {
+		line-height: 1.3;
+		margin-top: 3px;
+	}
+}
+.woocommerce ul.products li.product .relatedProdImage {
+	text-decoration: none;
+	display: block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 200px;
+	box-shadow: inset 0px 0px 0px 100% transparent;
+	@include transition(all ease-out .3s);
+	@media screen and (min-width: $tabwidth) {
+		height: 200px;
+	}
+	@media screen and (min-width: $midwidth) {
+		height: 230px;
+	}
+	img {
+		display: none;
+	}
+	&:hover {
+		box-shadow: inset 0px 0px 0px 5px rgba(6,55,72,0.75);
+	}
+}
+.woocommerce ul.products a.button {
+	text-decoration: none;
+	display: inline-block;
+	background: $color-yellow;
+	padding: 10px 14px;
+    color: #FFF;
+    &:hover {
+    	background: #ffc645;
+    }
+}
+.flexrow {
+	position: relative;
+	margin-left: -15px;
+	margin-right: -15px;
+	@media screen and (min-width: $tabwidth) {
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-direction(row);
+	}
+	.flexcol {
+		box-sizing: border-box;
+		position: relative;
+		padding: 15px;
+	}
+}
+.courses-section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	.flexcol.course {
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			width: 33.3%;
+		}
+	}
+	.icon img {
+		width: 80px;
+		height: auto;
+	}
+	.title {
+		margin: 10px 0 5px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.3;
+	}
+	.button {
+		margin-top: 28px;
+		a {
+			display: inline-block;
+			padding: 6px 30px;
+			background: $color-yellow;
+			color: #FFF;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: 600;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+.section-course-options {
+	margin-bottom: 30px;
+	.catname {
+		margin: 0 0;
+		padding: 10px 20px;
+		background: $color-yellow;
+		color: $color-dark-green;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.3;
+		text-align: center;
+	}
+	.itemswrap {
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+	.course-listing {
+		margin-bottom: 25px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.course-box {
+	border: 1px solid $color-dark-green;
+	margin: 20px 0;
+	.left {
+		@media screen and (min-width: $tabwidth) {
+			width: 66%;
+			float: left;
+		}
+	}
+	.right {
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+			float: right;
+			text-align: right;
+		}
+	}
+	.course-cat {
+		padding: 10px 20px;
+		background: $color-dark-green;
+		color: #FFF;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.3;
+	}
+	.course-info {
+		padding: 10px 20px;
+	}
+	.ctitle {
+		font-size: 16px;
+		font-weight: 600;
+		color: $color-dark-green;
+	}
+	.cprice {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 5px;
+	}
+	.c_addcart_btn .add_to_cart_button {
+		text-decoration: none;
+		display: inline-block;
+		background: $color-yellow;
+		padding: 8px 10px;
+		color: #FFF;
+		font-size: 13px;
+		&:hover {
+			color: #FFF;
+			background: #ffc645;
+		}
+	}
+	.added_to_cart {
+		text-decoration: underline;
+		position: relative;
+		left: 6px;
+		font-size: 13px;
+	}
+}
+
+.content-left-col {
+	.col-left {
+		@media screen and (min-width: $tabwidth) {
+			width: 25%;
+			float: left;
+		}
+	}
+	.col-right {
+		@media screen and (min-width: $tabwidth) {
+			width: 70%;
+			float: right;
+		}
+	}
+}
+
+.page-template-page-account {
+	.woocommerce-MyAccount-content {
+		width: 100%;
+		float: left;
+		margin-bottom: 15px;
+		a.button {
+			@include button_style(13px,7px 13px);
+		}
+	}
+	table.shop_table {
+		border: 1px solid #ccc;
+		thead th {
+			color: $color-dark-green;
+			background: $color-yellow;
+			padding: 5px 8px;
+			text-align: left;
+			&.woocommerce-orders-table__header-order-actions {
+				text-align: right;
+			}
+		}
+		tbody td {
+			padding: 6px 8px;
+			border-bottom: 1px solid #ccc;
+			background-color: #f4f5f5;
+		}
+		tbody tr:nth-child(odd) td {
+			background-color: #FFFFFF;
+		}
+		tbody tr:hover td {
+			background-color: #fdfbde;
+		}
+		td a.button {
+			@include button_style(12px,6px 8px 5px);
+			line-height: 1;
+			margin-top: 0;
+			border: none;
+			background: #a5a5a5;
+			&:hover {
+				border: none;
+			}
+		}
+		td.woocommerce-orders-table__cell-order-actions {
+			text-align: right;
+		}
+	}
+	.woocommerce-MyAccount-navigation {
+		width: 100%;
+		float: left;
+		margin-bottom: 20px;
+		@media screen and (min-width: $tabwidth) {
+			margin-bottom: 0;
+		}
+		ul {
+			margin: 0 0;
+			padding: 0 0;
+			list-style: none;
+		}
+		ul li a {
+			display: block;
+			padding: 9px 12px;
+			text-decoration: none;
+			border-left: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+		}
+		ul li:first-child a {
+			border-top: 1px solid #ccc;
+		}
+		ul li a:hover {
+			color: #446773;
+			background: #ececec;
+		}
+		ul li.is-active a {
+			color: #FFF;
+			background: $color-dark-green;
+			border-color: $color-dark-green;
+		}
+	}
+	.login-title {
+		margin: 0 0 15px;
+		font-size: 22px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	button.button {
+		@include button_style();
+	}
+	.woocommerce-Address-title {
+		position: relative;
+		margin-bottom: 10px;
+		h3 {
+			margin: 0 0;
+		}
+	}
+	.woocommerce-Address {
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		padding: 15px;
+		&.col-1 {
+			margin-bottom: 15px;
+			@media screen and (min-width: $midwidth) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	legend {
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	fieldset {
+		padding: 5px 20px;
+	}
+}
+
+.login-wrapper {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	.formcol {
+		position: relative;
+	}
+	.formcol.left {
+		margin-bottom: 20px;
+		@media screen and (min-width: $tabwidth) {
+			width: 48%;
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+	.formcol.right {
+		@media screen and (min-width: $tabwidth) {
+			width: 48%;
+			float: right;
+		}
+	}
+	.formcol form {
+		display: block;
+		padding: 27px 25px 25px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		position: relative;
+	}
+	button.button {
+		@include button_style();
+	}
+	.formtitle {
+		position: absolute;
+		left: 0;
+		top: -21px;
+		span {
+			display: inline-block;
+			font-size: 20px;
+			font-weight: 600;
+			color: $color-dark-green;
+			text-transform: uppercase;
+			background: #FFF;
+			padding: 5px 15px;
+			position: relative;
+    		left: 24px;
+		}
+	}
+	p.lost_password {
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+	p.woocommerce-FormRow {
+		margin-bottom: 0;
+	}
+	.form-row .input-text {
+		height: 36px;
+		line-height: 35px;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 5px 8px;
+		outline: none;
+		@include transition(all ease-in .3s);
+		&:focus {
+			border: 1px solid $color-dark-green;
+			-webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.23);
+			-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.23);
+			box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.23);
+		}
+	}
+	.woocommerce-form-login__rememberme {
+		input {
+			position: relative;
+			top: -1px;
+			margin-right: 3px;
+		}
+	}
+}
+.woocommerce-message {
+	border-top-color: #1b91ae;
+}
+.woocommerce-message::before {
+	color: #1b91ae;
+}
+.certificate_icon_large {
+	background:none!important;
+	width: 30px;
+	height: 25px;
+	position: relative;
+	top: -1px;
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		background-image:url('images/award.png');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+
+.error-404 {
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+.page-link-list {
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+	}
+	ul.linklist ul {
+		padding-left: 15px;
+	}
+	li {
+		position: relative;
+		padding-left: 14px;
+		&:before {
+			content:"";
+			display: block;
+			width: 6px;
+			height: 6px;
+			background: $color-dark-green;
+			position: absolute;
+			top: 8px;
+			left: 0;
+		}
+		a {
+			display: inline-block;
+			color: $color-dark-green;
+			text-decoration: none;
+			&:hover {
+				opacity: 0.45;
+			}
+		}
+	}
+}
+
+.sfwd-quiz {
+	a.btn-primary,
+	a.btn,
+	input[type="button"],
+	input[type="submit"],
+	button {
+		border: none;
+		background: #409c4c;
+		color: #fff;
+		box-shadow: none;
+		text-shadow: none;
+		border-radius: 5px;
+		-webkit-appearance: none;
+		&:hover {
+			background: #44d054;
+			color: #FFF;
+		}
+	}
+}
+

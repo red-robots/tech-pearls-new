@@ -1,0 +1,205 @@
+div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+    word-wrap: normal;
+    -ms-word-break: normal;
+    word-break: normal;
+    word-break: normal;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+    page-break-inside: avoid;
+}
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+a {
+	@include transition(all ease-out .3s);
+}
+html,body {
+	position: relative;
+}
+body {
+	font-family: $font__main;
+	line-height: $font__line-height-body;
+	font-size: 14px;
+	color: $color-default-text;
+}
+.text-center {text-align: center;}
+.wrapper, .clear {clear: both;}
+.wrapper:before, .wrapper:after, .clear:before,.clear:after {content: " "; display: table; }
+.wrapper:after, .clear:after {clear: both;}
+.wrapper, .clear {*zoom: 1;}
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0px auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.med-wrapper {
+	max-width: 900px;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+}
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo {
+	display: block;
+	width: 138px;
+	margin: 0;
+	position: absolute;
+	z-index: 10;
+	top: 8px;
+	&.fixed {
+		position: fixed;
+		z-index: 50;
+	}
+	@media screen and (min-width: $tabwidth) {
+		width: 30%;
+		position: relative;
+		top: 0;
+		float: left;
+	}
+	a {
+		display: block;
+		width: 100%;
+		float: left;
+		text-decoration: none;
+		color: #FFF;
+		font-size: 30px;
+		@media screen and (min-width: $tabwidth) {
+			width: 180px;
+		}
+		@media screen and (min-width: $midwidth) {
+			width: 250px;
+		}
+	}
+	img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+}
+.site-header {
+	position: relative;
+	z-index: 20;
+	background-color: $color-dark-green;
+	height: 60px;
+	@media screen and (min-width: $tabwidth) {
+		height: auto;
+	}
+	.header-inner {
+		position: relative;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 0;
+		padding-top: 0;
+		@media screen and (min-width: $tabwidth) {
+			padding-top: 20px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 20px;
+
+			@include flexbox();
+			@include flexbox-wrap(wrap);
+			@include flexbox-justify(center);
+			@include flexbox-align-content(center);
+		}
+	}
+	.main-navigation {
+		@media screen and (min-width: $tabwidth) {
+			@include flexbox();
+			@include flexbox-wrap(wrap);
+			@include flexbox-justify(center);
+			@include flexbox-align-content(center);
+		}
+	}
+}
+
+.home .site-header {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	.header-inner {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		@media screen and (min-width: $tabwidth) {
+			padding-top: 20px;
+		}
+		@media screen and (min-width: $midwidth) {
+			padding-top: 30px;
+		}
+	}
+	.logo {
+		top: 15px;
+		@media screen and (min-width: $tabwidth) {
+			top: 0;
+		}
+	}
+}
+
+.cta-btn {
+	&.yellow {
+		display: inline-block;
+		background: $color-yellow;
+		color: #FFF;
+		text-decoration: none;
+		padding: 13px 35px;
+		font-size: 20px;
+		font-weight: 400;
+		@include transition(all ease-out .3s);
+	}
+	&:hover {
+		@include transform( scale(1.1) );
+	}
+}
+
+.full-content-area {
+	min-height: 30em;
+}
+.subpage .site-main {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: fixed!important;
+	}
+}
